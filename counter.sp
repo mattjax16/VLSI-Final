@@ -26,11 +26,7 @@ vgnd gnd 0 0v
 .param vdd = 1.05
 
 
-** for tranient analysis
-.param trf = 6p *initial rise/fall time of the transient source
-.param del = 2u *Defines the delay (del) before the pulse starts as 2 microsecond.
-.param per = 10u *Defines the pulse width (pw) as 10 microsecond.
-.param pw = 5u *Defines the period (per) of the pulse as 5 microseconds.
+
 
 *define analysis voltage
 vinput vi gnd pulse 0 vdd del trf trf pw per
@@ -144,9 +140,28 @@ XINV vi vo vdd gnd inverter W_p=wp W_n=300n
 * Load Capacitance
 CLOAD vo gnd c_load
 
-* Optimization Model
-.model opt1 opt
-.param wp = OPTrange(400n, 200n, 1000n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************* OLD STUFF **********************************************
+* * Optimization Model
+* .model opt1 opt
+* .param wp = OPTrange(400n, 200n, 1000n)
 
 
 *** Part A: Optimize for tpLH - tpHL = 0
@@ -155,28 +170,21 @@ CLOAD vo gnd c_load
 * .measure tran tpd param='tplh-tphl' goal=0
 * .tran 1p '3*per' sweep optimize=optrange results=tpd model=OPT1 * Run optimization
 
-*** Comment out Part A and uncomment Part B for second optimization
-*** Part B: Optimize for minimum average delay tp = (tpHL + tpLH) / 2
-.measure tran tphl trig v(vi) val='vdd*0.5' rise=2 targ v(vo) val='vdd*0.5' fall=2
-.measure tran tplh trig v(vi) val='vdd*0.5' fall=2 targ v(vo) val='vdd*0.5' rise=2
-.measure tran tp param='(tplh+tphl)/2' goal=0
-.tran 1p '3*per' sweep optimize=optrange results=tp model=OPT1 * Run optimization
 
 
+* ** for tranient analysis
+* .param trf = 6p *initial rise/fall time of the transient source
+* .param del = 2u *Defines the delay (del) before the pulse starts as 2 microsecond.
+* .param per = 10u *Defines the pulse width (pw) as 10 microsecond.
+* .param pw = 5u *Defines the period (per) of the pulse as 5 microseconds.
 
-**########### Question 3 Optimizing PMOS Width in a CMOS Inverter for  Switching Threshold in a Balanced CMOS Inverter ###########**
-* Use the same CMOS inverter setting in Problem 2. Use the HSPICE Optimization
-* tool to find the width of the PMOS for the following requirement:
-* a. Switching threshold (Vm) equals to half of Vdd. (Balanced Inverter)
-* You will need to use a new measure command. An example is given below:
-* .Dc vc 0 1.2 0.02 sweep optimize=optrange2 Results=wid Model=opt1
-* .measure DC wid FIND V(2) WHEN V(1)='0.1*Vdd'
-*Then you can run optimization on this measurement
-*.MEASURE <DC|TRAN|AC> result FIND out_var1 WHEN out_var2 = out_var3
-*+ <TD = val > < RISE = r | LAST > < FALL = f | LAST >
-*+ <CROSS = c | LAST> <GOAL = val> <MINVAL = val> <WEIGHT = val>
-*this command find the voltage value at node ‘2’ when the voltage value at node ‘1’
-* equals *0.1*Vdd
+* *** Comment out Part A and uncomment Part B for second optimization
+* *** Part B: Optimize for minimum average delay tp = (tpHL + tpLH) / 2
+* .measure tran tphl trig v(vi) val='vdd*0.5' rise=2 targ v(vo) val='vdd*0.5' fall=2
+* .measure tran tplh trig v(vi) val='vdd*0.5' fall=2 targ v(vo) val='vdd*0.5' rise=2
+* .measure tran tp param='(tplh+tphl)/2' goal=0
+* .tran 1p '3*per' sweep optimize=optrange results=tp model=OPT1 * Run optimization
+
 
 
 * * Measure Switching Threshold (Vm) = Vdd/2
