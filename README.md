@@ -210,3 +210,8 @@ This ensures the output is HIGH when two or more inputs are HIGH.
 
 ## Minimal Gate Implementation
 This can be implemented using 3 two-input AND gates followed by a 3-input OR gate.
+
+
+# Other Resources
+
+- https://www.allaboutcircuits.com/textbook/digital/chpt-3/cmos-gate-circuitry/
