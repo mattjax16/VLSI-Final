@@ -179,7 +179,9 @@ This can also be implemented using only NAND gates, though the circuit would be 
 # N1
 
 N1 =1 = (A AND B) OR (A AND C) OR (B AND C)
+
 N1=(A AND (B OR C)) OR (B AND C)
+
 # 3-Input Logic Circuit Design
 
 ## Truth Table
