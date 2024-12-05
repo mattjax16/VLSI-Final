@@ -116,9 +116,9 @@ Submit the following:
 # Breakdown
 Lets think of N1 and N0 as 2 seperate subcircuits to start
 
-# N1
+# N0
 
-N1 = (A XOR B) XOR C
+N0 = (A XOR B) XOR C
 
 ## Truth Table
 Let A, B, and C be the three inputs. 
@@ -176,10 +176,10 @@ This can also be implemented using only NAND gates, though the circuit would be 
 - When all inputs are high, the output is also high
 - When zero or two inputs are high, the output is low
 
-# N2
+# N1
 
-N2 =1 = (A AND B) OR (A AND C) OR (B AND C)
-
+N1 =1 = (A AND B) OR (A AND C) OR (B AND C)
+N1=(A AND (B OR C)) OR (B AND C)
 # 3-Input Logic Circuit Design
 
 ## Truth Table
