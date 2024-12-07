@@ -5,12 +5,12 @@
   with the terms and conditions of a written license agreement with
   Synopsys, Inc. All other use, reproduction, or distribution of
   this software is strictly prohibited.
-  Input File: tt.sp                                                             
-  Command line options: /usr/cots/synopsys/HSPICE-K-2015.06-3/hspice/linux64/hspice -i tt.sp -o tt.lis
+  Input File: aa.sp                                                             
+  Command line options: /usr/cots/synopsys/HSPICE-K-2015.06-3/hspice/linux64/hspice -i aa.sp -o aa.lis
  lic:  
  lic: FLEXlm: v11.2.1 
  lic: USER:   mbass01              HOSTNAME: vm-hw00 
- lic: HOSTID: 005056000000         PID:      143089 
+ lic: HOSTID: 005056000000         PID:      134526 
  lic: Using FLEXlm license file: 
  lic: 27000@vm-license1 
  lic: Checkout 1 hspice 
@@ -18,7 +18,7 @@
  lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 27000@vm-license1 
  lic:   
  Init: read install configuration file: /usr/cots/synopsys/HSPICE-K-2015.06-3/hspice/meta.cfg
-  **warning** (tt.sp:61) Global net name, "vdd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+  **warning** (aa.sp:59) Global net name, "vdd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
 1****** HSPICE -- K-2015.06-3 linux64 (Aug  5 2015) ******                      
  ******  
  *library file
@@ -27,35 +27,49 @@
  circuit number to circuit name directory
    number circuitname                     definition         multiplier
         0 main circuit
-        1 xnandaddr.                      n1_f               1.00 
-        2 xnandaddr.xm4.                  n105               1.00 
-        3 xnandaddr.xm3.                  n105               1.00 
-        4 xnandaddr.xm2.                  n105               1.00 
-        5 xnandaddr.xm1.                  n105               1.00 
-        6 xnandaddr.xm0.                  n105               1.00 
-        7 xnandaddr.xm9.                  p105               1.00 
-        8 xnandaddr.xm8.                  p105               1.00 
-        9 xnandaddr.xm7.                  p105               1.00 
-       10 xnandaddr.xm6.                  p105               1.00 
-       11 xnandaddr.xm5.                  p105               1.00 
-       12 xnandaddr.xi15.                 inverter           1.00 
-       13 xnandaddr.xi14.                 inverter           1.00 
-       14 xnandaddr.xi13.                 inverter           1.00 
-       15 xnandaddr.xi12.                 inverter           1.00 
-       16 xnandaddr.xi11.                 inverter           1.00 
-       17 xnandaddr.xi10.                 inverter           1.00 
-       18 xnandaddr.xi15.xm0.             p105               1.00 
-       19 xnandaddr.xi15.xm1.             n105               1.00 
-       20 xnandaddr.xi14.xm0.             p105               1.00 
-       21 xnandaddr.xi14.xm1.             n105               1.00 
-       22 xnandaddr.xi13.xm0.             p105               1.00 
-       23 xnandaddr.xi13.xm1.             n105               1.00 
-       24 xnandaddr.xi12.xm0.             p105               1.00 
-       25 xnandaddr.xi12.xm1.             n105               1.00 
-       26 xnandaddr.xi11.xm0.             p105               1.00 
-       27 xnandaddr.xi11.xm1.             n105               1.00 
-       28 xnandaddr.xi10.xm0.             p105               1.00 
-       29 xnandaddr.xi10.xm1.             n105               1.00 
+        1 xnandaddr.                      final_a            1.00 
+        2 xnandaddr.xm22.                 n105               1.00 
+        3 xnandaddr.xm21.                 n105               1.00 
+        4 xnandaddr.xm20.                 n105               1.00 
+        5 xnandaddr.xm19.                 n105               1.00 
+        6 xnandaddr.xm18.                 n105               1.00 
+        7 xnandaddr.xm17.                 n105               1.00 
+        8 xnandaddr.xm16.                 n105               1.00 
+        9 xnandaddr.xm4.                  n105               1.00 
+       10 xnandaddr.xm3.                  n105               1.00 
+       11 xnandaddr.xm2.                  n105               1.00 
+       12 xnandaddr.xm1.                  n105               1.00 
+       13 xnandaddr.xm0.                  n105               1.00 
+       14 xnandaddr.xm29.                 p105               1.00 
+       15 xnandaddr.xm28.                 p105               1.00 
+       16 xnandaddr.xm27.                 p105               1.00 
+       17 xnandaddr.xm26.                 p105               1.00 
+       18 xnandaddr.xm25.                 p105               1.00 
+       19 xnandaddr.xm24.                 p105               1.00 
+       20 xnandaddr.xm23.                 p105               1.00 
+       21 xnandaddr.xm9.                  p105               1.00 
+       22 xnandaddr.xm8.                  p105               1.00 
+       23 xnandaddr.xm7.                  p105               1.00 
+       24 xnandaddr.xm6.                  p105               1.00 
+       25 xnandaddr.xm5.                  p105               1.00 
+       26 xnandaddr.xi15.                 inverter           1.00 
+       27 xnandaddr.xi14.                 inverter           1.00 
+       28 xnandaddr.xi13.                 inverter           1.00 
+       29 xnandaddr.xi12.                 inverter           1.00 
+       30 xnandaddr.xi11.                 inverter           1.00 
+       31 xnandaddr.xi10.                 inverter           1.00 
+       32 xnandaddr.xi15.xm0.             p105               1.00 
+       33 xnandaddr.xi15.xm1.             n105               1.00 
+       34 xnandaddr.xi14.xm0.             p105               1.00 
+       35 xnandaddr.xi14.xm1.             n105               1.00 
+       36 xnandaddr.xi13.xm0.             p105               1.00 
+       37 xnandaddr.xi13.xm1.             n105               1.00 
+       38 xnandaddr.xi12.xm0.             p105               1.00 
+       39 xnandaddr.xi12.xm1.             n105               1.00 
+       40 xnandaddr.xi11.xm0.             p105               1.00 
+       41 xnandaddr.xi11.xm1.             n105               1.00 
+       42 xnandaddr.xi10.xm0.             p105               1.00 
+       43 xnandaddr.xi10.xm1.             n105               1.00 
 1****** HSPICE -- K-2015.06-3 linux64 (Aug  5 2015) ******                      
  ******  
  *library file
@@ -1755,8 +1769,8 @@
     PKVTH0WE   =      0 
     PK2WE      =      0 
     PKU0WE     =      0 
-  **warning** (tt.sp:18) Both nodes of element vgnd are connected together; Line ignored.
-  **info** (tt.sp:120) DC voltage reset to initial transient source value in source            0:vinput_1. new dc=  0.0000D+00
+  **warning** (aa.sp:18) Both nodes of element vgnd are connected together; Line ignored.
+  **info** (aa.sp:124) DC voltage reset to initial transient source value in source            0:vinput_1. new dc=  0.0000D+00
   
       
  **info** set option symb=1 internally to help for convergence.
@@ -1765,7 +1779,7 @@
  ******
  runlvl  = 3         bypass  = 2         
   Opening plot unit= 15
- file=tt.pa0
+ file=aa.pa0
 
  **info** dc convergence successful at Newton-Raphson method 
 1****** HSPICE -- K-2015.06-3 linux64 (Aug  5 2015) ******                      
@@ -1776,22 +1790,28 @@
  ****** operating point status is voltage   simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:v1      =   1.0500   0:vdd     =   1.0500   0:vi_a    =   0.     
- + 0:vi_b    =   0.       0:vi_c    =   0.       1:!a      =   1.0500 
- + 1:!b      =   1.0500   1:!c      =   1.0500   1:net39   =   1.0500 
- + 1:net56   =  50.6319m  1:net59   =   1.0500   1:net9    =  14.3202m
+ + 0:v0      = 945.8678m  0:v1      = 945.8678m  0:vdd     =   1.0500 
+ + 0:vi_a    =   0.       0:vi_b    =   0.       0:vi_c    =   0.     
+ + 1:!a      = 945.8678m  1:!b      = 945.8678m  1:!c      = 183.7979n
+ + 1:net115  = 945.8678m  1:net125  = 945.8678m  1:net129  = 945.8678m
+ + 1:net39   = 945.8678m  1:net56   =  88.4850n  1:net59   = 801.5399m
+ + 1:net82   =  43.8846m  1:net9    =  88.4850n  1:net94   = 117.4387n
+ + 1:net98   =  93.3919n
 
 
- maximum nodal capacitance=   1.291E-13         on node     0:v1              
+ maximum nodal capacitance=   6.831E-15         on node     0:v1              
 
     nodal  capacitance table 
 
      node    =    cap       node    =    cap       node    =    cap
 
- + 0:v1      = 129.1228f  0:vdd     =   4.5135f  0:vi_a    =   1.3062f
- + 0:vi_b    =   1.8269f  0:vi_c    =   1.8274f  1:!a      = 830.6174a
- + 1:!b      = 830.6174a  1:!c      = 830.6174a  1:net39   = 602.7636a
- + 1:net56   = 395.0561a  1:net59   = 878.7957a  1:net9    = 200.7426a
+ + 0:v0      = 980.1725a  0:v1      =   6.8313f  0:vdd     =   2.5395f
+ + 0:vi_a    =   1.1680f  0:vi_b    =   2.3292f  0:vi_c    =   2.8161f
+ + 1:!a      = 828.1139a  1:!b      = 828.1139a  1:!c      = 791.0556a
+ + 1:net115  =   1.2451f  1:net125  = 509.5617a  1:net129  = 598.9346a
+ + 1:net39   = 509.7041a  1:net56   = 442.8190a  1:net59   = 720.2937a
+ + 1:net82   = 198.0791a  1:net9    = 240.4150a  1:net94   = 443.7412a
+ + 1:net98   = 239.3109a
 
  
 
@@ -1823,12 +1843,12 @@
   Voltage Sources :       1
 
   ******  Circuit Statistics  ******
-  # nodes       =      13 # elements   =      27
-  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # nodes       =      20 # elements   =      40
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
   # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
-  # jfets       =       0 # mosfets    =      22 # U elements  =       0
+  # jfets       =       0 # mosfets    =      36 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
   # S elements  =       0 # P elements =       0 # va device   =       0
   # vector_srcs =       0 # N elements =       0
@@ -1837,19 +1857,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1          11
-  transient          0.37    31000001         762         285 rev=        19
-  readin             1.17
+  op point           0.00           1          19
+  transient          0.32    31000001          66          33 rev=         0
+  readin             1.10
   errchk             0.01
   setup              0.00
   output             0.00
 
 
            peak memory used        275.39 megabytes
-           total cpu time            1.55 seconds
-           total elapsed time        1.10 seconds
-           job started at     18:50:59 12/07/2024
-           job ended   at     18:51:00 12/07/2024
+           total cpu time            1.43 seconds
+           total elapsed time        1.00 seconds
+           job started at     18:17:11 12/07/2024
+           job ended   at     18:17:12 12/07/2024
 
 
  lic: Release hspice token(s) 
