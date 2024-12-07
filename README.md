@@ -213,6 +213,16 @@ This ensures the output is HIGH when two or more inputs are HIGH.
 ## Minimal Gate Implementation
 This can be implemented using 3 two-input AND gates followed by a 3-input OR gate.
 
+# What I Ended Up Doing
+
+First see that 
+
+N1 = A(B+C) + (BC)
+
+
+Then
+
+N0 = 
 
 # Other Resources
 
