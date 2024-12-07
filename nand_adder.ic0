@@ -1,0 +1,35 @@
+* "simulator" "HSPICE" 
+* "version" "K-2015.06-3 linux64"
+* "format" "HSP"
+* "rundate" "19:11:33 12/05/2024 "
+* "netlist" "nand_adder.sp "
+* "runtitle" "*library file"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vdd =   1.0500        
++ vi_a =   0.            
++ vi_b =   0.            
++ vi_c =   0.            
++ vo_0 = 670.1173n       
++ vo_1 = 670.1173n       
++ xnandaddr.![[anorb]*c] =   1.0500        
++ xnandaddr.![ab] =   1.0500        
++ xnandaddr.axorb = 921.4903n       
++ xnandaddr.net29 =   1.0500        
++ xnandaddr.net30 =   1.0500        
++ xnandaddr.net71 =   1.0500        
++ xnandaddr.net72 =   1.0500        
++ xnandaddr.xi10.net30 = 423.5435n       
++ xnandaddr.xi0.net30 =  46.4919m       
++ xnandaddr.xi9.net30 = 121.0986n       
++ xnandaddr.xi8.net30 = 857.1653m       
++ xnandaddr.xi6.net30 = 549.2299n       
++ xnandaddr.xi4.net30 =  46.4924m       
++ xnandaddr.xi1.net30 = 121.0994n       
++ xnandaddr.xi2.net30 = 857.1653m       
++ xnandaddr.xi7.net30 = 423.5435n       
+***   END: Saved Operating Point ***                     
